@@ -26,8 +26,9 @@ const Home = () => {
   return (
     <div className="home-container">
       <div className="header">
-        <button onClick={handleLogout}>Logout</button>
+        <button  className="logout"  onClick={handleLogout}>Logout</button>
       </div>
+      <div className="todo-container">
       <div className="content">
         <div className="sidebar">
           <AddProductForm products={products} setProducts={setProducts} />
@@ -37,6 +38,7 @@ const Home = () => {
           <ProductList products={filteredProducts.length ? filteredProducts : products} removeProduct={removeProduct} />
         </div>
       </div>
+    </div>
     </div>
   );
 };

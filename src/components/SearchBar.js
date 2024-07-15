@@ -16,14 +16,14 @@ const SearchBar = ({ products, setFilteredProducts }) => {
   };
 
   return (
-    <div>
+    <div className="search-bar">
       <input 
         type="text" 
         placeholder="Search Products" 
         value={searchQuery} 
         onChange={(e) => setSearchQuery(e.target.value)} 
       />
-      <button onClick={handleSearch}>Search</button>
+      <button className='btn-search' onClick={handleSearch}>Search</button>
     </div>
   );
 };

@@ -31,23 +31,32 @@ const AddProductForm = ({ products, setProducts }) => {
   };
 
   return (
+  <>
+    <center>
+      <h1>Product Form</h1>
+    </center>
     <div className="add-product-form">
-      <h2>Add Product</h2>
+  
       {error && <p className="error">{error}</p>}
-      <input 
-        type="text" 
-        placeholder="Product Name" 
-        value={productName} 
-        onChange={(e) => setProductName(e.target.value)} 
-      />
-      <input 
-        type="number" 
-        placeholder="Price" 
-        value={price} 
-        onChange={(e) => setPrice(e.target.value)} 
-      />
-      <button onClick={handleAddProduct}>Add Product</button>
+      <div className="input-container">
+        <input 
+          type="text" 
+          className="input-text"
+          placeholder="Product Name" 
+          value={productName} 
+          onChange={(e) => setProductName(e.target.value)} 
+        />
+        <input 
+          type="number" 
+          className="input-text"
+          placeholder="Price" 
+          value={price} 
+          onChange={(e) => setPrice(e.target.value)} 
+        />
+        <button className="btn-add" onClick={handleAddProduct}>Add Product</button>
+      </div>
     </div>
+</>
   );
 };
 

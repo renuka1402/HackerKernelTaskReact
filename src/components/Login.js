@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+
 const Login = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -23,8 +24,7 @@ const Login = () => {
     if (data.token) {
       localStorage.setItem('token', data.token);
 
-      
-      alert("Succesfully Login")
+      alert("Successfully Logged In");
       navigate('/home');
     } else {
       alert('Invalid email and password');
@@ -32,14 +32,17 @@ const Login = () => {
   };
 
   return (
-    <div>
-      <h1 >Login Page</h1>
+    <div className="login-container">
+      <h2>Login Page</h2>
+      <div className="input-message error"></div>
+      <label>Email</label>
       <input 
         type="email" 
         placeholder="Email" 
         value={email} 
         onChange={(e) => setEmail(e.target.value)} 
       />
+      <label>Password</label>
       <input 
         type="password" 
         placeholder="Password" 

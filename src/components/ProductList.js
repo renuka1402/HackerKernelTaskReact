@@ -5,15 +5,15 @@ const ProductList = ({ products, removeProduct }) => {
       {products.length === 0 ? (
         <p style={{color:"red"}}>Not Product Available</p>
       ) : (
-        <table className="product-table">
-          <thead>
+        <table className="project-table">
+        
             <tr>
               <th>Product Name</th>
               <th>Price</th>
               <th>Remove</th>
             </tr>
-          </thead>
-          <tbody>
+         
+        
             {products.map((product, remove) => (
               <tr key={remove}>
                 <td>{product.name}</td>
@@ -27,7 +27,7 @@ const ProductList = ({ products, removeProduct }) => {
                 </td>
               </tr>
             ))}
-          </tbody>
+        
         </table>
       )}
     </div>
